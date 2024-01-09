@@ -1,0 +1,18 @@
+{
+  "name": "visualtree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "visualBinaryTree.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "binary-tree-visualizer": "^2.1.5"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.4.1"
+  }
+}
