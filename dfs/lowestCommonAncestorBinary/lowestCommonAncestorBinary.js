@@ -1,11 +1,8 @@
-class TreeNode {
-  constructor(val, left, right) {
-    this.val = val
-    this.left = left
-    this.right = right
-  }
-}
 export function lowestCommonAncestorBinary(root, p, q) {
-  if (!root) return
-  
+  if (!root) return null
+  if (root.val === p.val || root.val === q.val) return root
+  let left = lowestCommonAncestorBinary(root.right, p, q)
+  let right = lowestCommonAncestorBinary(root.left, p, q)
+  if (left && right) return root
+  return right ? right : left
 }
