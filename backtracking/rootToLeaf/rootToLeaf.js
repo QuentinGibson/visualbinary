@@ -1,13 +1,16 @@
 function dfs(root, path, res) {
   if (root.children.length === 0) {
     path.push(root.val)
-    res.push(path)
+    res.push([...path])
+    path.pop()
     return
   }
-  for (let children of root.children) {
-    const path_copy = Array.from(path)
-    path_copy.push(root.val)
-    dfs(children, path_copy, res)
+  for (let child of root.children) {
+    if (child) {
+      path.push(root.val)
+      dfs(child, path, res)
+      path.pop()
+    }
   }
 }
 
